@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { CardProps } from './index';
 
-export const Container = styled.div`
+export const Container = styled.div<CardProps>`
     cursor: pointer;
     width: 100%;
     height: 158px;
     background-color: var(--dark);
-    background-image: url('/assets/thumbnail-example.jpg');
+    background-image: url(${props => props.thumbImg});
     background-size: cover;
     background-position: 50%;
     margin-right: 100px;

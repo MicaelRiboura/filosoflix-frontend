@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container } from './styles';
 
-const Card: React.FC = () => {
+export interface CardProps {
+    thumbImg: string;
+}
+
+const Card: React.FC<CardProps> = ({thumbImg}) => {
     return (
-        <Container>
+        <Container thumbImg={thumbImg}>
 
         </Container>
     );

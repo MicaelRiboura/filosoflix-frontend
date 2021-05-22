@@ -1,7 +1,6 @@
 
 import { Container, ContainerInfo, Description, Image } from './styles';
 
-
 const Banner: React.FC = () => {
     const bannerContent =  {
         id: 1,
@@ -20,7 +19,7 @@ const Banner: React.FC = () => {
                     <button>Assista agora</button>
                 </Description>
                 <Image>
-                    <img className="js-tilt" src={bannerContent.imageAuthor} alt="Clóvis de Barros" />
+                    <img src={bannerContent.imageAuthor} alt="Clóvis de Barros" />
                 </Image>
             </ContainerInfo>
         </Container>
