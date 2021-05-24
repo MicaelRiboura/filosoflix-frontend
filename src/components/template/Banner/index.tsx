@@ -1,5 +1,6 @@
 
 import { Container, ContainerInfo, Description, Image } from './styles';
+import Link from 'next/link';
 
 const Banner: React.FC = () => {
     const bannerContent =  {
@@ -16,7 +17,11 @@ const Banner: React.FC = () => {
                 <Description>
                     <h1>{bannerContent.title}</h1>
                     <p>{bannerContent.author}</p>
-                    <button>Assista agora</button>
+                    <Link href={`/video/felicidade-e-aqui-e-agora`}>
+                        <a>
+                            <button>Assista agora</button>
+                        </a>
+                    </Link>
                 </Description>
                 <Image>
                     <img src={bannerContent.imageAuthor} alt="Clóvis de Barros" />

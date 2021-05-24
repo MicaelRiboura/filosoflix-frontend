@@ -3,6 +3,7 @@
 ## 23/05/2021 - Micael Riboura dos Santos
 
  - Criação da página de Detalhes do vídeo
+ - Adição do link para o vídeo no banner
 
 ## 22/05/2021 - Micael Riboura dos Santos
 
