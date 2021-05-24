@@ -1,15 +1,14 @@
 import React from 'react';
 import { Container } from './styles';
+import Link from 'next/link';
 
 export interface CardProps {
     thumbImg: string;
 }
 
-const Card: React.FC<CardProps> = ({thumbImg}) => {
+const Card: React.FC<CardProps> = ({ thumbImg }) => {
     return (
-        <Container thumbImg={thumbImg}>
-
-        </Container>
+        <Container thumbImg={thumbImg}></Container>
     );
 }
 

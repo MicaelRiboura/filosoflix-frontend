@@ -7,6 +7,7 @@ import Caroussel from '../components/Caroussel';
 import Card from '../components/Card';
 import Header from '../components/template/Header';
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
 
 interface PageProps {
     videos: VideoI[];
@@ -25,7 +26,11 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                     <Caroussel title="Michel Foucault"
                         cards={videos.map(video => {
                             return (
-                                <Card thumbImg={video.thumbImg} />
+                                <Link href={`/video/${video.slug}`} >
+                                    <a>
+                                        <Card thumbImg={video.thumbImg} />
+                                    </a>
+                                </Link>
                             )
                         })}>
                     </Caroussel>

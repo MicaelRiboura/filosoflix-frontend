@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CardProps } from './index';
+import { CardProps } from './index'
 
 export const Container = styled.div<CardProps>`
     cursor: pointer;
