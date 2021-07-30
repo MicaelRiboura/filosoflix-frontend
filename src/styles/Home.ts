@@ -10,7 +10,8 @@ export const Section = styled.div`
 export const Content = styled.div`
     height: 100%;
     position: relative;
-    margin-top: -20px;
+    /* margin-top: -20px; */
+    padding: 4rem 0;
     min-height: 100%;
     max-width: 1440px;
     margin: 0 auto;

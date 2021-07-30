@@ -14,11 +14,13 @@ import {
 import Button from '../../components/forms/Button';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
+import Card from "../../components/Card";
 interface PageProps {
     video: VideoI;
+    videos: VideoI[];
 }
 
-const VideoDetail: React.FC<PageProps> = ({ video }) => {
+const VideoDetail: React.FC<PageProps> = ({ video, videos }) => {
     return (
         <Container>
             <VideoArea>
@@ -47,11 +49,15 @@ const VideoDetail: React.FC<PageProps> = ({ video }) => {
                 </TagsArea>
                 <WatchMoreArea>
                     <h2>Assista também</h2>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    {videos.filter(v => v.id !== video.id).map(v => {
+                        return (
+                            <Link href={`/video/${v.slug}`} >
+                                <a>
+                                    <Card thumbImg={v.thumbImg} />
+                                </a>
+                            </Link>
+                        )
+                    })}
                 </WatchMoreArea>
             </InfoArea>
         </Container>
@@ -63,8 +69,8 @@ export default VideoDetail;
 export const getServerSideProps: GetServerSideProps<PageProps> = async (context) => {
     const slug = context.params?.slug;
     const video = await fetch(`http://localhost:3000/api/videos/${slug}`).then((res) => res.json())
-
+    const videos = await fetch('http://localhost:3000/api/videos').then((res) => res.json())
     return {
-        props: { video },
+        props: { video, videos },
     }
 }

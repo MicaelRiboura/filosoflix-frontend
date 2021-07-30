@@ -3,7 +3,7 @@ import { Container, ContainerInfo, Description, Image } from './styles';
 import Link from 'next/link';
 
 const Banner: React.FC = () => {
-    const bannerContent =  {
+    const bannerContent = {
         id: 1,
         title: 'Felicidade é aqui e agora',
         author: 'Clóvis de Barros',

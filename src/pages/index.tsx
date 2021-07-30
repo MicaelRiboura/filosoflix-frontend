@@ -23,7 +23,7 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
             <Banner />
             <Section>
                 <Content>
-                    <Caroussel title="Michel Foucault"
+                    <Caroussel title="Recomendados"
                         cards={videos.map(video => {
                             return (
                                 <Link href={`/video/${video.slug}`} >
@@ -34,24 +34,36 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                             )
                         })}>
                     </Caroussel>
-                    <Caroussel title="Michel Foucault"
+                    <Caroussel title="Populares"
                         cards={videos.map(video => {
                             return (
-                                <Card thumbImg={video.thumbImg} />
+                                <Link href={`/video/${video.slug}`} >
+                                    <a>
+                                        <Card thumbImg={video.thumbImg} />
+                                    </a>
+                                </Link>
                             )
                         })}>
                     </Caroussel>
-                    <Caroussel title="Michel Foucault"
+                    <Caroussel title="Favoritos"
                         cards={videos.map(video => {
                             return (
-                                <Card thumbImg={video.thumbImg} />
+                                <Link href={`/video/${video.slug}`} >
+                                    <a>
+                                        <Card thumbImg={video.thumbImg} />
+                                    </a>
+                                </Link>
                             )
                         })}>
                     </Caroussel>
-                    <Caroussel title="Michel Foucault"
+                    <Caroussel title="Continuar assistindo"
                         cards={videos.map(video => {
                             return (
-                                <Card thumbImg={video.thumbImg} />
+                                <Link href={`/video/${video.slug}`} >
+                                    <a>
+                                        <Card thumbImg={video.thumbImg} />
+                                    </a>
+                                </Link>
                             )
                         })}>
                     </Caroussel>
