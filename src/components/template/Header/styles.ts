@@ -6,6 +6,7 @@ export const Container = styled.div`
     background-color: var(--header-color);
     position: fixed;
     z-index: 4;
+    padding: 0 1rem;
 `;
 
 export const Navbar = styled.div`
@@ -32,6 +33,9 @@ export const Navcontent = styled.div`
 export const Navlist = styled.ul`
     display: flex;
     align-items: center;
+    @media(max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const NavItem = styled.li`
@@ -65,10 +69,18 @@ export const NavUser = styled.div`
         color: var(--white);
         margin-right: 16px;
     }
+
+    @media(max-width: 480px) {
+        p {
+            display: none;
+        }
+    }
 `;
 
 export const Avatar = styled.div`
-    background-color: var(--dark);
+    background-image: url(https://www.ilriformista.it/wp-content/uploads/2022/02/nietzsche-900x600.jpg);
+    background-size: cover;
+    background-position: 50%;
     height: 46px;
     width: 46px;
     border-radius: 50%;
