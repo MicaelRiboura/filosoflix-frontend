@@ -1,8 +1,12 @@
 
 import { Container, ContainerInfo, Description, Image } from './styles';
 import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const Banner: React.FC = () => {
+
+    const [isMuted, setMuted] = useState(true);
+
     const bannerContent = {
         id: 1,
         title: 'Felicidade é aqui e agora',
@@ -10,24 +14,44 @@ const Banner: React.FC = () => {
         videoId: 'HsQx02JdZ2Q',
         imageAuthor: '/assets/clovis-de-barros.png'
     }
+
+    const LoadVideo = useCallback(() => {
+        return (
+          <video
+            className="video"
+            controls
+            autoPlay={true}
+            loop={true}
+            muted={isMutedRef.current}
+          >
+            <source src="/assets/videos/banner.mp4" type="video/mp4" />
+          </video>
+        );
+    }, []);
+
+    const isMutedRef = useRef(false);
+
+    useEffect(() => {
+        isMutedRef.current = isMuted;
+    }, [isMuted])
     return (
-        <Container>
-            <iframe className="video" title={bannerContent.title} src={`https://www.youtube.com/embed/${bannerContent.videoId}?autoplay=1&controls=0&end=30`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            <ContainerInfo>
-                <Description>
-                    <h1>{bannerContent.title}</h1>
-                    <p>{bannerContent.author}</p>
-                    <Link href={`/video/felicidade-e-aqui-e-agora`}>
-                        <a>
-                            <button>Assista agora</button>
-                        </a>
-                    </Link>
-                </Description>
-                <Image>
-                    <img src={bannerContent.imageAuthor} alt="Clóvis de Barros" />
-                </Image>
-            </ContainerInfo>
-        </Container>
+      <Container
+        onMouseEnter={() => setMuted(true)}
+        onMouseLeave={() => setMuted(false)}
+      >
+        <ContainerInfo>
+            <LoadVideo />
+          <Description>
+            <h1>{bannerContent.title}</h1>
+            <p>{bannerContent.author}</p>
+            <Link href={`/video/felicidade-e-aqui-e-agora`}>
+              <a>
+                <button>Assista agora</button>
+              </a>
+            </Link>
+          </Description>
+        </ContainerInfo>
+      </Container>
     );
 }
 

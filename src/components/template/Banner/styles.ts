@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    padding-top: 200px;
     width: 100%;
     height: 90vh;
-    background: linear-gradient(0.4deg, #05061C 0.37%, rgba(0, 0, 0, 0.59) 105.06%);
+    background: linear-gradient(0.4deg, #05061C 0.37%, rgba(0, 0, 0, 0.39) 105.06%);
     .video{
         position: absolute;
         top: 0;
@@ -20,31 +21,35 @@ export const ContainerInfo = styled.div`
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
+    padding: 2rem;
 `;
 
 export const Description = styled.div`
-    max-width: 661px;
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
     align-items: flex-start;
     h1{
-        font-size: 124px;
+        font-size: 76px;
         color: var(--white);
         font-weight: extrabold;
         text-transform: uppercase;
         line-height: 96.2%;
         text-align: left;
+        margin-bottom: 1rem;
     }
     
     p{
         color: var(--white);
-        font-size: 47px;
+        font-size: 31px;
         text-align: left;
+        margin-bottom: 2rem;
     }
 
     button{
-        padding: 16px 33px;
+        padding: 10px 33px;
         font-size: 18px;
         text-transform: uppercase;
         border-radius: 10px;
@@ -52,7 +57,7 @@ export const Description = styled.div`
         outline: none;
         cursor: pointer;
         left: 0;
-        border: 1px solid var(--primary);
+        border: 2px solid var(--primary);
         background: transparent;
         color: var(--white);
         position: relative;
