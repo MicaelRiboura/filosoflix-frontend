@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from './styles';
-import Link from 'next/link';
 
 export interface CardProps {
     thumbImg: string;
