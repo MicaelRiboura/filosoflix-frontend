@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Section, Content } from '../styles/Home';
-import { VideoI } from '../samples/videos.sample';
+import { IVideo } from '../samples/videos.sample';
 
 import Banner from '../components/template/Banner';
 import Caroussel from '../components/Caroussel';
@@ -10,7 +10,7 @@ import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 
 interface PageProps {
-    videos: VideoI[];
+    videos: IVideo[];
 }
 
 const Home: React.FC<PageProps> = ({ videos }: PageProps) => {

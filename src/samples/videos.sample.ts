@@ -1,4 +1,4 @@
-export interface VideoI {
+export interface IVideo {
     id: string;
     title: string;
     slug: string;
@@ -8,12 +8,12 @@ export interface VideoI {
     videoId: string;
 }
 
-export interface VideosI {
-   videos : VideoI[];
+export interface IVideos {
+   videos: IVideo[];
 }
 
 
-export const videos: VideosI = {
+export const data: IVideos = {
     videos:  [
         {
             id: '1',
@@ -67,7 +67,7 @@ export const videos: VideosI = {
             thumbImg: '/assets/thumbnail-example-2.jpg',
             description: '',
             author: 'Leandro Karnal',
-            videoId: ''
+            videoId: 'i8bIjrXmv68'
         },
         {
             id: '6',
@@ -76,7 +76,7 @@ export const videos: VideosI = {
             thumbImg: '/assets/thumbnail-example.jpg',
             description: '',
             author: 'Leandro Karnal',
-            videoId: ''
+            videoId: 'i8bIjrXmv68'
         },
         {
             id: '7',
@@ -85,7 +85,7 @@ export const videos: VideosI = {
             thumbImg: '/assets/thumbnail-example-2.jpg',
             description: '',
             author: 'Leandro Karnal',
-            videoId: ''
+            videoId: 'i8bIjrXmv68'
         },
     ]
 }

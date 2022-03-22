@@ -1,5 +1,5 @@
 import { GetServerSideProps } from "next";
-import { VideoI } from "../../samples/videos.sample";
+import { IVideo } from "../../samples/videos.sample";
 import {
     Container,
     VideoArea,
@@ -16,8 +16,8 @@ import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import Card from "../../components/Card";
 interface PageProps {
-    video: VideoI;
-    videos: VideoI[];
+    video: IVideo;
+    videos: IVideo[];
 }
 
 const VideoDetail: React.FC<PageProps> = ({ video, videos }) => {
