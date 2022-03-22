@@ -11,6 +11,7 @@ interface Breakpoints {
     slidesSm: number;
     slidesMd: number;
     slidesLg: number;
+    slidesXl: number;
 }
 
 interface CarousselProps
@@ -31,16 +32,19 @@ const Caroussel: React.FC<CarousselProps> = ({ cards, slides, title }) => {
                     spaceBetween={20}
                     breakpoints={{
                       320: {
-                        slidesPerView: slides ? slides.slidesSm : 2,
+                        slidesPerView: slides ? slides.slidesSm : 1,
                       },
                       480: {
-                        slidesPerView: slides ? slides.slidesSm : 2,
+                        slidesPerView: slides ? slides.slidesSm : 1,
                       },
                       768: {
-                        slidesPerView: slides ? slides.slidesMd : 3,
+                        slidesPerView: slides ? slides.slidesMd :2,
                       },
                       1024: {
-                        slidesPerView: slides ? slides.slidesLg : 5,
+                        slidesPerView: slides ? slides.slidesLg : 3,
+                      },
+                      1440: {
+                        slidesPerView: slides ? slides.slidesXl : 5,
                       },
                     }}
                     navigation
