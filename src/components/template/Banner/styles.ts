@@ -13,6 +13,16 @@ export const Container = styled.div`
         height: 100vh;
         z-index: -2;
     }
+
+    @media(max-width: 480px) {
+        overflow-x: hidden;
+        .video{
+            position: fixed;
+            transform: scale(4);
+            height: 100vh;
+            z-index: -2;
+        }
+    }
 `;
 
 export const ContainerInfo = styled.div`
@@ -65,6 +75,26 @@ export const Description = styled.div`
         
         &:hover{
             background-color: var(--primary);
+        }
+    }
+
+    @media(max-width: 480px) {
+        width: 100%;
+        h1{
+            font-size: 49px;
+        }
+        
+        p{
+            font-size: 29px;
+        }
+    }
+    @media(max-width: 375px) {
+        h1{
+            font-size: 39px;
+        }
+        
+        p{
+            font-size: 19px;
         }
     }
 `;
