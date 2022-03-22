@@ -15,6 +15,8 @@ import Button from '../../components/forms/Button';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import Card from "../../components/Card";
+import { baseUrl } from "../../config/services";
+
 interface PageProps {
     video: IVideo;
     videos: IVideo[];
@@ -68,8 +70,9 @@ export default VideoDetail;
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async (context) => {
     const slug = context.params?.slug;
-    const video = await fetch(`http://localhost:3000/api/videos/${slug}`).then((res) => res.json())
-    const videos = await fetch('http://localhost:3000/api/videos').then((res) => res.json())
+
+    const video = await fetch(`${baseUrl}/api/videos/${slug}`).then((res) => res.json())
+    const videos = await fetch(`${baseUrl}/api/videos`).then((res) => res.json())
     return {
         props: { video, videos },
     }

@@ -8,6 +8,7 @@ import Card from '../components/Card';
 import Header from '../components/template/Header';
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
+import { baseUrl } from '../config/services';
 
 interface PageProps {
     videos: IVideo[];
@@ -77,7 +78,7 @@ export default Home;
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 
-    const videos = await fetch('http://localhost:3000/api/videos').then((res) => res.json())
+    const videos = await fetch(`${baseUrl}/api/videos`).then((res) => res.json())
 
     return {
         props: { videos },
