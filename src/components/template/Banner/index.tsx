@@ -1,5 +1,5 @@
 
-import { Container, ContainerInfo, Description, Image } from './styles';
+import { Container, ContainerInfo, Description } from './styles';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
