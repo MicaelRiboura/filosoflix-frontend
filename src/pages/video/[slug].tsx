@@ -14,7 +14,7 @@ import {
 import Button from '../../components/forms/Button';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import Card from "../../components/Card";
+import Card, { CardOptions } from "../../components/Card";
 import { baseUrl } from "../../config/services";
 
 interface PageProps {
@@ -55,7 +55,7 @@ const VideoDetail: React.FC<PageProps> = ({ video, videos }) => {
                         return (
                             <Link href={`/video/${v.slug}`} >
                                 <a>
-                                    <Card thumbImg={v.thumbImg} />
+                                    <Card thumbImg={v.thumbImg} option={CardOptions.videosdetails} />
                                 </a>
                             </Link>
                         )
