@@ -2,13 +2,22 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    width: 100%;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 1rem .5rem;;
+    overflow-x: hidden;
+    @media(max-width: 1024px) {
+        flex-direction: column;
+    }
 `;
 
 export const VideoArea = styled.div`
     width: 80%;
+    @media(max-width: 1440px) {
+        width: 70%;
+    }
+    @media(max-width: 1024px) {
+        width: 100%;
+    }
     color: #fff;
 `;
 export const VideoAreaTitle = styled.div`
@@ -19,6 +28,39 @@ export const VideoAreaTitle = styled.div`
     h1 {
         margin-left: 20px;
         font-size: 3rem;
+    }
+
+    @media(max-width: 768px) {
+        align-items: center;
+        padding: 0 .5rem;
+        h1 {
+            margin-left: 1rem;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+
+    @media(max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+        a{
+            margin-left: 1rem;
+        }
+        h1 {
+            margin-top: 1rem;
+            margin-left: 1rem;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+
+     @media(max-width: 375px) {
+        h1 {
+            margin-top: 1rem;
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
     }
 `;
 
@@ -33,11 +75,25 @@ export const VideoPlayer = styled.div`
         width: 100%;
         height: 100%;
     }
+
+    @media(max-width: 768px) {
+        padding: 2rem 0;
+        height: 600px;
+    }
+    @media(max-width: 480px) {
+        height: 400px;
+    }
 `;
 
 
 export const InfoArea = styled.div`
     width: 20%;
+    @media(max-width: 1440px) {
+        width: 30%;
+    }
+    @media(max-width: 1024px) {
+        width: 100%;
+    }
 `;
 export const AuthorInfo = styled.div`
     display: flex;
@@ -80,17 +136,5 @@ export const WatchMoreArea = styled.div`
         font-size: 1.1rem;
         text-transform: uppercase;
     }
-    div {
-        width: 100%;
-        height: 200px;
-        margin: 10px 0;
-        background-color: #000;
-        cursor: pointer;
-        border: 2px solid var(--bg-color);
-        transition: .3s;
-        &:hover {
-            border: 2px solid var(--primary);
-
-        }
-    }
+   
 `;
