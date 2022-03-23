@@ -40,14 +40,13 @@ const VideoDetail: React.FC<PageProps> = ({ video, videos }) => {
             </VideoArea>
             <InfoArea>
                 <AuthorInfo>
-                    <AuthorThumb />
-                    <h1>{video.author}</h1>
+                    <AuthorThumb image={video.author.avatar} />
+                    <h1>{video.author.name}</h1>
                 </AuthorInfo>
                 <TagsArea>
-                    <div>#intolerancia</div>
-                    <div>#religiao</div>
-                    <div>#karnal</div>
-                    <div>#reflexão</div>
+                    {video.tags.map(tag => (
+                        <div>#{tag}</div>
+                    ))}
                 </TagsArea>
                 <WatchMoreArea>
                     <h2>Assista também</h2>

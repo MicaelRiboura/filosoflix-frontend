@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface AuthorThumb {
+    image: string;
+}
+
 export const Container = styled.div`
     display: flex;
     min-height: 100vh;
@@ -104,9 +108,12 @@ export const AuthorInfo = styled.div`
         font-size: 1.5rem;
     }
 `;
-export const AuthorThumb = styled.div`
+export const AuthorThumb = styled.div<AuthorThumb>`
    border-radius: 50%;
    background-color: #000;
+   background-image: url(${props => props.image});
+   background-size: cover;
+   background-position: 50%;
    width: 50px;
    height: 50px;
    margin-right: 10px;
