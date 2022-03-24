@@ -18,12 +18,16 @@ export const VideoArea = styled.div`
     width: 80%;
     p {
         padding: 1rem 4rem;
+        text-align: justify;
     }
     @media(max-width: 1440px) {
         width: 70%;
     }
     @media(max-width: 1024px) {
         width: 100%;
+         p {
+            padding: 1rem 1rem;
+        }
     }
     color: #fff;
 `;
