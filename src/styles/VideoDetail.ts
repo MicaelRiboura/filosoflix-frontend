@@ -16,6 +16,9 @@ export const Container = styled.div`
 
 export const VideoArea = styled.div`
     width: 80%;
+    p {
+        padding: 1rem 4rem;
+    }
     @media(max-width: 1440px) {
         width: 70%;
     }

@@ -78,7 +78,7 @@ export const NavUser = styled.div`
 `;
 
 export const Avatar = styled.div`
-    background-image: url(https://www.ilriformista.it/wp-content/uploads/2022/02/nietzsche-900x600.jpg);
+    background-image: url(https://i.pravatar.cc/300);
     background-size: cover;
     background-position: 50%;
     height: 46px;

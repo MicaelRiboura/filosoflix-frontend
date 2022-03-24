@@ -10,8 +10,7 @@ const Banner: React.FC = () => {
     const bannerContent = {
         id: 1,
         title: 'Felicidade é aqui e agora',
-        author: 'Clóvis de Barros',
-        videoId: 'HsQx02JdZ2Q',
+        author: 'Nome Autor',
         imageAuthor: '/assets/clovis-de-barros.png'
     }
 

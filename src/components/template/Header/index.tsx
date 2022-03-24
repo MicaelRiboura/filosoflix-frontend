@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                     <Logo>
                         <img src="/assets/logo.svg" alt=""/>
                     </Logo>
-                    <Navlist>
+                    {/* <Navlist>
                         <NavItem>   
                                 Home
                         </NavItem>
@@ -37,10 +37,10 @@ const Header: React.FC = () => {
                         <NavItem>                            
                                 Minha Lista
                         </NavItem>
-                    </Navlist>
+                    </Navlist> */}
                 </Navcontent>
                 <NavUser>
-                    <p>Micael</p>
+                    <p>Usuário</p>
                     <Avatar />
                     <RiLogoutCircleRLine className="icon" />
                 </NavUser>

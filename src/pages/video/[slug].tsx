@@ -37,6 +37,9 @@ const VideoDetail: React.FC<PageProps> = ({ video, videos }) => {
                 <VideoPlayer>
                     <iframe className="video" title={video.title} src={`https://www.youtube.com/embed/${video.videoId}?autoplay=0&controls=1`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </VideoPlayer>
+                <p>
+                    Atenção! O vídeo disponível no player do Youtube é sem direitos autorais apenas para exemplificar um vídeo na plataforma.
+                </p>
             </VideoArea>
             <InfoArea>
                 <AuthorInfo>
