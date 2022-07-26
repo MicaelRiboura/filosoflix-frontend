@@ -1,15 +1,10 @@
 <h1 align="center" style="color: #000;">
-  <img src="https://github.com/MicaelRiboura/timesheetApp/blob/main/images/timesheet.png" alt="logo" height="200">
+  <img src="https://github.com/MicaelRiboura/filosoflix-frontend/blob/main/readme-images/logo.svg" alt="logo" height="100">
 </h1>
 
 <h3 align="center">
-  Filosoflix - Explore conteúdos de Filosofia
+  Explore conteúdos de Filosofia
 </h3>
-
-
-<h1 align="center" style="color: #000;">
-  <img src="https://github.com/MicaelRiboura/timesheetApp/blob/main/images/timesheet-presentation.jpg" alt="homepage">
-</h1>
 
 ## 🚀 Tecnologias
 
