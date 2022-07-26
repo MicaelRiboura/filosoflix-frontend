@@ -21,12 +21,12 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
     }, [])
     return (
         <>
-            <Header />
+            <Header isFixed />
             <Banner />
             <Section>
                 <Content>
                     <Caroussel title="Recomendados"
-                        cards={videos.map(video => {
+                        cards={videos.filter(video => video.playlists.includes("Recomendados")).map(video => {
                             return (
                                 <Link href={`/video/${video.slug}`} >
                                     <a>
@@ -37,7 +37,7 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                         })}>
                     </Caroussel>
                     <Caroussel title="Populares"
-                        cards={videos.map(video => {
+                        cards={videos.filter(video => video.playlists.includes("Populares")).map(video => {
                             return (
                                 <Link href={`/video/${video.slug}`} >
                                     <a>
@@ -48,7 +48,7 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                         })}>
                     </Caroussel>
                     <Caroussel title="Favoritos"
-                        cards={videos.map(video => {
+                        cards={videos.filter(video => video.playlists.includes("Favoritos")).map(video => {
                             return (
                                 <Link href={`/video/${video.slug}`} >
                                     <a>
@@ -59,7 +59,7 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                         })}>
                     </Caroussel>
                     <Caroussel title="Continuar assistindo"
-                        cards={videos.map(video => {
+                        cards={videos.filter(video => video.playlists.includes("Continuar assistindo")).map(video => {
                             return (
                                 <Link href={`/video/${video.slug}`} >
                                     <a>
