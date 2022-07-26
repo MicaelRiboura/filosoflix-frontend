@@ -10,7 +10,7 @@ const Banner: React.FC = () => {
     const bannerContent = {
         id: 1,
         title: 'Felicidade é aqui e agora',
-        author: 'Nome Autor',
+        author: 'Clóvis de Barros Filho',
         imageAuthor: '/assets/clovis-de-barros.png'
     }
 
@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
             loop={true}
             muted={isMutedRef.current}
           >
-            <source src="/assets/videos/banner.mp4" type="video/mp4" />
+            <source src="/assets/videos/example.mp4" type="video/mp4" />
           </video>
         );
     }, []);
