@@ -14,10 +14,14 @@ import {
 // import { useAuth } from '../../contexts/auth';
 import { RiLogoutCircleRLine } from 'react-icons/ri';
 
-const Header: React.FC = () => {
+export interface IHeaderProps {
+    isFixed: boolean;
+}
+
+const Header: React.FC<IHeaderProps> = ({ isFixed }) => {
     // const { user, signOut } = useAuth();
     return (
-        <Container>
+        <Container isFixed={isFixed}>
             <Navbar>
                 <Navcontent>
                     <Logo>

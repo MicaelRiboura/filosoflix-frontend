@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { IHeaderProps } from '.';
 
-export const Container = styled.div`
+export const Container = styled.div<IHeaderProps>`
     width: 100%;
     height: 105px;
     background-color: var(--header-color);
-    position: fixed;
+    position: ${props => props.isFixed ? 'fixed' : 'block'};
     z-index: 4;
     padding: 0 1rem;
 `;
