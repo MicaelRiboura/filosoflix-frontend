@@ -9,6 +9,7 @@ import Header from '../components/template/Header';
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import { baseUrl } from '../config/services';
+import Footer from '../components/template/Footer';
 
 interface PageProps {
     videos: IVideo[];
@@ -70,6 +71,7 @@ const Home: React.FC<PageProps> = ({ videos }: PageProps) => {
                     </Caroussel>
                 </Content>
             </Section>
+            <Footer />
         </>
     );
 }
